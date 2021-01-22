@@ -46,7 +46,7 @@ namespace ArcsoftIDCardFace.Utils
             }
             pitch = line;
             bm.UnlockBits(data);
-
+            bm.Dispose();
             IntPtr imageDataPtr = MemoryUtil.Malloc(destBitArray.Length);
             MemoryUtil.Copy(destBitArray, 0, imageDataPtr, destBitArray.Length);
             offInput.u32PixelArrayFormat = ASF_ImagePixelFormat.ASVL_PAF_RGB24_B8G8R8;
